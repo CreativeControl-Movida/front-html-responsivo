@@ -365,7 +365,8 @@
 
 .finally .list-box-info {
     display: flex;
-    flex-flow: row wrap;
+    /* flex-flow: row wrap; */
+    justify-content: start;
     margin-bottom: 60px;
 }
 
@@ -375,6 +376,7 @@
     border-radius: 25px;
     background: #ff7a0b;
     padding: 20px 15px;
+    margin-right: 10px;
 }
 
 .finally .list-box-info li .name {
@@ -434,7 +436,7 @@
   }
 
   .list-box-info {
-    flex-flow: column nowrap;
+    /* flex-flow: column nowrap; */
     justify-content: unset;
   }
   .list-box-info li {

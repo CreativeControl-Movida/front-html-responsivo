@@ -85,7 +85,7 @@ function confirmReservation(e){
     // validate all inputs 
     if(validateAll(data)){
         alert("Reserva feita com sucesso!");
-        window.location = "home.html";
+        window.location = "index.html";
     }else{
         alert('Preencha todos os campos!');
     }
