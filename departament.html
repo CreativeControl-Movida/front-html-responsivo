@@ -1,0 +1,563 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;1,700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="src/css/app.css" />
+    <link rel="stylesheet" href="src/css/departament.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+
+    <!-- header -->
+    <header class="__header">
+        <!-- Top Navigation Menu -->
+        <div class="topnav">
+          <div class="main-nav">
+            <a href="./home.html">
+              <img src="./src/assets/logo-movida-white.png" alt="Movida Aluguél de Carros" class="logo-image">
+            </a>
+
+            <div class="flex">
+                  
+              <div class="header-language">
+                <i class="__icon __icon-language"></i>
+                <select name="language" id="language">
+                  <option value="portuguese" selected>Português</option>
+                </select>
+              </div>
+
+              <!-- "Hamburger menu" / "Bar icon" to toggle the navigation links -->
+              <a href="javascript:void(0);" class="icon" onclick="toggleNavBar()">
+                <i class="fa fa-bars"></i>
+              </a>
+            </div>
+          </div>
+
+          <!-- Navigation links (hidden by default) -->
+          <nav id="myLinks" class="removed">
+            <ul>
+              <li><a href="#signup">Cadastre-se</a></li>
+              <li><a href="#login" class="login">Login</a> </li>
+              <li><a href="#rent">Como alugar</a></li>
+              <li><a href="#cartypes">Tipos de carros</a></li>
+              <li><a href="#rentplan">Planos de aluguéis</a></li>
+              <li><a href="#discover">Descubra seu tipo ideal</a></li>
+              <li><a href="#services">Serviços disponíveis</a></li>
+              <li><a href="#findshop">Encontre uma loja</a></li>
+            </ul>
+          </nav>
+        </div>
+
+        <div class="container">
+            <div class="__header-top flex">
+                <nav>
+                    <ul class="flex">
+                        <li><a href="">Cadastre-se</a></li>
+                        <li><a href="">Minhas reservas</a></li>
+                        <li class="select-language"><i class="__icon __icon-language"></i>Português</li>
+                    </ul>
+                </nav>
+            </div>
+
+            <div class="__header-bottom flex">
+                <h1 class="__header-logo">
+                    Movida Aluguel de Carros 
+                </h1>
+
+                <nav class="__header-menu flex">
+                    <ul class="flex just-space-bet">
+                        <li><a href="">COMO ALUGAR?</a></li>
+                        <li><a href="">TIPOS DE CARROS</a></li>
+                        <li><a href="">PLANOS DE ALUGUÉIS</a></li>
+                        <li><a href="">DESCUBRA SEU TIPO IDEAL</a></li>
+                        <li><a href="">SERVIÇOS DISPONÍVEIS</a></li>
+                        <li><a href="">ENCONTRE UMA LOJA</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </header>
+    <!-- end header -->
+
+    <!-- departament -->
+    <main class="departament">
+        <div class="container">
+            <div class="__description-page">
+                <h2>ESCOLHA O SEU TIPO DE CARRO</h2>
+                <p>Escolha o carro para seu conforto e segurança durante a viagem!</p>
+            </div>
+
+            <!-- <div class="__filter">
+                <div class="__filter-custom">
+                    <p>FILTRAR POR:</p>
+
+                    <div class="acessorios">
+                        <h3>ACESSÓRIOS</h3>
+                    </div>
+                    <div class="quantity">
+                        <h3>QUANTIDADES</h3>
+                    </div>
+                    <div class="type-car">
+                        <h3>TIPO DE CARRO</h3>
+                    </div>
+                </div>
+
+                <div class="__filter-order">
+                    <div class="order-by">
+                        <h3>ORDENAR POR</h3>
+                    </div>
+                </div>
+            </div> -->
+
+            <ul class="__list-cars">
+                <li>
+                    <div class="__box-car">
+                        <h2>GRUPO AX - MOVIDA ON</h2>
+
+                        <img src="src/assets/grupo-ax.png" alt="car" />
+                    
+                        <div class="description-car">
+                            <p>Mobi Like ou similar</p>
+                        </div>
+
+                        <div class="advantages">
+                            <h3>Incluso</h3>
+                            <ul>
+                                <li>Ar Condicionado</li>
+                                <li>Câmbio Manual</li>
+                                <li>Lugar para 2 malas</li>
+                                <li>5 passageiros</li>
+                                <li>Freio ABS</li>
+                                <li>Diária com KM Livre</li>
+                            </ul>
+                        </div>
+
+                        <div class="buttons">
+                            <a href="finally-reservation.html"><strong>R$ 184,23</strong> à vista <br/> PAGAR AGORA</a>
+                            <a href="finally-reservation.html"><strong>R$ 189,93</strong> <br/>PAGAR DEPOIS</a>
+                        </div>
+                    </div>
+                </li>
+                
+                <li>
+                    <div class="__box-car">
+                        <h2>GRUPO D - HATCH AUTOMÁTICO</h2>
+                        <img src="src/assets/grupo-d.jpg" alt="" />
+                    
+                        <div class="description-car">
+                            <p>HB20, Polo ou similar</p>
+                        </div>
+
+                        <div class="advantages">
+                            <h3>Incluso</h3>
+                            <ul>
+                                <li>Ar Condicionado</li>
+                                <li>Câmbio Automático</li>
+                                <li>Lugar para 3 malas</li>
+                                <li>5 passageiros</li>
+                                <li>Freio ABS</li>
+                                <li>Diária com KM Livre</li>
+                            </ul>
+                        </div>
+
+                        <div class="buttons">
+                            <a href="finally-reservation.html"><strong>R$ 250,06</strong> à vista <br/> PAGAR AGORA</a>
+                            <a href="finally-reservation.html"><strong>R$ 257,79</strong> <br/>PAGAR DEPOIS</a>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <div class="__box-car">
+                        <h2>GRUPO HX - SUV AUTOMÁTICA</h2>
+                        <img src="src/assets/grupo-hx.png" alt="" />
+                    
+                        <div class="description-car">
+                            <p>Creta, Renegade, T-cross ou Similar</p>
+                        </div>
+
+                        <div class="advantages">
+                            <h3>Incluso</h3>
+                            <ul>
+                                <li>Ar Condicionado</li>
+                                <li>Câmbio Automático</li>
+                                <li>Lugar para 5 malas</li>
+                                <li>5 passageiros</li>
+                                <li>Freio ABS</li>
+                                <li>Diária com KM Livre</li>
+                            </ul>
+                        </div>
+
+                        <div class="buttons">
+                            <a href="finally-reservation.html"><strong>R$ 385,05</strong> à vista <br/> PAGAR AGORA</a>
+                            <a href="finally-reservation.html"><strong>R$ 396,96</strong> <br/>PAGAR DEPOIS</a>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <div class="__box-car">
+                        <h2>GRUPO J - MINIVAN</h2>
+                        <img src="src/assets/grupo-j.png" alt="" />
+                    
+                        <div class="description-car">
+                            <p>Doblo Passeio, Spin ou similar</p>
+                        </div>
+
+                        <div class="advantages">
+                            <h3>Incluso</h3>
+                            <ul>
+                                <li>Ar Condicionado</li>
+                                <li>Câmbio Manual</li>
+                                <li>Lugar para 2 malas</li>
+                                <li>7 passageiros</li>
+                                <li>Freio ABS</li>
+                                <li>Diária com KM Livre</li>
+                            </ul>
+                        </div>
+
+                        <div class="buttons">
+                            <a href="finally-reservation.html"><strong>R$ 419,70</strong> à vista <br/> PAGAR AGORA</a>
+                            <a href="finally-reservation.html"><strong>R$ 432,68</strong> <br/>PAGAR DEPOIS</a>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <div class="__box-car">
+                        <h2>GRUPO K - MINIVAN AUTOMÁTICA</h2>
+                        <img src="src/assets/grupo-k.png" alt="" />
+                    
+                        <div class="description-car">
+                            <p>Spin ou similar</p>
+                        </div>
+
+                        <div class="advantages">
+                            <h3>Incluso</h3>
+                            <ul>
+                                <li>Ar Condicionado</li>
+                                <li>Câmbio Automático</li>
+                                <li>Lugar para 2 malas</li>
+                                <li>7 passageiros</li>
+                                <li>Freio ABS</li>
+                                <li>Diária com KM Livre</li>
+                            </ul>
+                        </div>
+
+                        <div class="buttons">
+                            <a href="finally-reservation.html"><strong>R$ 393,71,42</strong> à vista <br/> PAGAR AGORA</a>
+                            <a href="finally-reservation.html"><strong>R$ 405,89</strong> <br/>PAGAR DEPOIS</a>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <div class="__box-car">
+                        <h2>GRUPO L - MINI PICK-UP</h2>
+                        <img src="src/assets/grupo-l.jpg" alt="" />
+                    
+                        <div class="description-car">
+                            <p>Strada, Saveiro ou similar</p>
+                        </div>
+
+                        <div class="advantages">
+                            <h3>Incluso</h3>
+                            <ul>
+                                <li>Ar Condicionado</li>
+                                <li>Câmbio Manual</li>
+                                <li>2 passageiros</li>
+                                <li>Freio ABS</li>
+                                <li>Diária com KM Livre</li>
+                            </ul>
+                        </div>
+
+                        <div class="buttons">
+                            <a href="finally-reservation.html"><strong>R$ 306,24</strong> à vista <br/> PAGAR AGORA</a>
+                            <a href="finally-reservation.html"><strong>R$ 315,71</strong> <br/>PAGAR DEPOIS</a>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <div class="__box-car">
+                        <h2>GRUPO M - FURGÃO</h2>
+                        <img src="src/assets/grupo-m.png" alt="" />
+                    
+                        <div class="description-car">
+                            <p>Fiorino ou similar</p>
+                        </div>
+
+                        <div class="advantages">
+                            <h3>Incluso</h3>
+                            <ul>
+                                <li>Ar Condicionado</li>
+                                <li>Câmbio Manual</li>
+                                <li>2 passageiros</li>
+                                <li>Freio ABS</li>
+                                <li>Diária com KM Livre</li>
+                            </ul>
+                        </div>
+
+                        <div class="buttons">
+                            <a href="finally-reservation.html"><strong>R$ 334,82</strong> à vista <br/> PAGAR AGORA</a>
+                            <a href="finally-reservation.html"><strong>R$ 345,18</strong> <br/>PAGAR DEPOIS</a>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <div class="__box-car">
+                        <h2>GRUPO QX - EXECUTIVO AUTOMÁTICO</h2>
+                        <img src="src/assets/grupo-qx.jpg" alt="" />
+                    
+                        <div class="description-car">
+                            <p>Corolla, Jetta, Cruze e Similar</p>
+                        </div>
+
+                        <div class="advantages">
+                            <h3>Incluso</h3>
+                            <ul>
+                                <li>Ar Condicionado</li>
+                                <li>Câmbio Automático</li>
+                                <li>Lugar para 4 malas</li>
+                                <li>5 passageiros</li>
+                                <li>Freio ABS</li>
+                                <li>Diária com KM Livre</li>
+                            </ul>
+                        </div>
+
+                        <div class="buttons">
+                            <a href="finally-reservation.html"><strong>R$ 436,15</strong> à vista <br/> PAGAR AGORA</a>
+                            <a href="finally-reservation.html"><strong>R$ 449,64</strong> <br/>PAGAR DEPOIS</a>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <div class="__box-car">
+                        <h2>GRUPO SS - PICK-UP</h2>
+                        <img src="src/assets/grupo-ss.jpg" alt="" />
+                    
+                        <div class="description-car">
+                            <p>Oroch, Toro ou Similar</p>
+                        </div>
+
+                        <div class="advantages">
+                            <h3>Incluso</h3>
+                            <ul>
+                                <li>Ar Condicionado</li>
+                                <li>Câmbio Automático</li>
+                                <li>5 passageiros</li>
+                                <li>Freio ABS</li>
+                                <li>Diária com KM Livre</li>
+                            </ul>
+                        </div>
+
+                        <div class="buttons">
+                            <a href="finally-reservation.html"><strong>R$ 478,38</strong> à vista <br/> PAGAR AGORA</a>
+                            <a href="finally-reservation.html"><strong>R$ 493,18</strong> <br/>PAGAR DEPOIS</a>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+            
+            
+        </div> 
+    </main>
+    <!-- end departament -->
+
+    <!-- newsletter -->
+    <div class="__newsletter">
+        <div class="container">
+            <div class="__box-news"> 
+                <p>Cadastre seu email e receba ofertas especiais pensadas para você</p>
+                <form action="">
+                  <input type="text" id="email-newsletter" placeholder="Digite seu email aqui" />
+
+                  <button>Enviar</button>
+                </form>
+            </div>
+        </div>
+    </div>
+    <!-- end newsletter -->
+
+
+    <!-- footer -->
+    <footer>
+        <div class="container">
+            <div class="map-site">
+                <div class="__col __col-one">
+                    <ul>
+                        <li>
+                            <h4>INSTITUCIONAL</h4>
+                        </li>
+                        <li><h5><a href="">Sobre nós</a></h5></li>
+                        <li><h5><a href="">Carreiras</a></h5></li>
+                    </ul>
+                    <ul>
+                        <li>
+                            <h4>SEGURANÇA</h4>
+                        </li>
+                        <li><h5><a href="">Privacidade e Segurança</a></h5></li>
+                        <li><h5><a href="">Termos e condições</a></h5></li>
+                    </ul>
+                </div>
+                <div class="__col __col-two">
+                    <ul>
+                        <li>
+                            <h4>PARA EMPRESAS</h4>
+                        </li>
+                        <li><h5><a href="">Terceirize sua frota</a></h5></li>
+                    </ul>
+                    <ul>
+                        <li>
+                            <h4>RELACIONAMENTO</h4>
+                        </li>
+                        <li><h5><a href="">Portal do colaborador</a></h5></li>
+                        <li><h5><a href="">Portal B2B</a></h5></li>
+                        <li><h5><a href="">Perguntas frequentes</a></h5></li>
+                    </ul>
+                </div>
+                <div class="__col __col-three">
+                    <ul>
+                        <li>
+                            <h4>NOSSOS SERVIÇOS</h4>
+                        </li>
+                        <li><h5><a href="">Aluguel eventual</a></h5></li>
+                        <li><h5><a href="">Aluguel mensal</a></h5></li>
+                        <li><h5><a href="">Aluguel anual</a></h5></li>
+                        <li><h5><a href="">Pré-pago Movida</a></h5></li>
+                        <li><h5><a href="">Seminovos Movida</a></h5></li>
+                        <li><h5><a href="">Movida ZeroKM</a></h5></li>
+                    </ul>
+                </div>
+                <div class="__col __col-four">
+                    <ul>
+                        <li>
+                            <h4>ATENDIMENTO</h4>
+                            <span>
+                                Segunda a Sábado as 8h as 19h <br/>
+                                <a href="">0800 606 8686</a>
+                            </span>
+                        </li>
+                        <li>
+                            <h4>REDES SOCIAIS </h4>
+                            <ul class="social">
+                                <li class="__icon __icon-instagram"><a href=""></a></li>
+                                <li class="__icon __icon-facebook"><a href=""></a></li>
+                                <li class="__icon __icon-twitter"><a href=""></a></li>
+                                <li class="__icon __icon-youtube"><a href=""></a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+                <div class="__app-col __col-five app">
+                    <div class="banner-app">
+                        <img src="src/assets/min-banner-app.png" alt="" />
+                    </div>
+                    <div class="__description-app">
+                        <span>Baixe grátis o aplicativo Movida  e tenha acesso a descontos exclusivos!</span>
+                        <a href=""><img src="src/assets/app-apple.jpg" /></a>
+                        <a href=""><img src="src/assets/app-google.jpg" /></a>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        
+        <ul class="__banners-services">
+            <li>
+                <a href="">
+                    <img src="src/assets/logo-movida-white.png" />
+                    <div class="text">
+                        <p>Opções mais novas e completas para 
+                            você encontrar o carro perfeito.</p>
+                        <span>Saiba mais >></span>
+                    </div>
+                </a>
+            </li>
+            <li>
+                <a href="">
+                    <img src="src/assets/logo-movida-frotas-white.png" />
+                    <div class="text">
+                        <p>Opções mais novas e completas para 
+                            você encontrar o carro perfeito.</p>
+                        <span>Saiba mais >></span>
+                    </div>
+                </a>
+            </li>
+            <li>
+                <a href="">
+                    <img src="src/assets/logo-movida-seminovos.png" />
+                    <div class="text">
+                        <p>Opções mais novas e completas para 
+                            você encontrar o carro perfeito.</p>
+                        <span>Saiba mais >></span>
+                    </div>
+                </a>
+            </li>
+        </ul>
+
+        <div class="copyright">
+            <div class="container">
+                <small class="span">
+                    © 2020 Movida Aluguel de Carros | Todos os direitos reservados.
+                </small>
+                <small>
+                    Use o cinto de segurança
+                </small>
+            </div>
+        </div>
+    </footer>
+    <!-- end footer -->
+
+    <div class="__modal-login">
+        <div class="__modal-login-overlay"></div>
+        <div class="__modal-login-box">
+            <div class="message-discount">
+                <p>Faça login ou cadastre-se para ter <strong>5% de 
+                    desconto</strong> na sua locação. </p>
+            </div>
+
+            <h3>Acesse sua conta</h3>
+
+            <form action="">
+                <p>
+                    <input type="text" id="user-login" placeholder="CPF ou Passaporte" />
+                </p>
+
+                <p>
+                    <input id="password-login" type="password" placeholder="Senha" />
+                    <span class="change-type-password"></span>
+                </p>
+
+                <span class="remember-password">Esqueci minha senha</span>
+
+                <button>ENTRAR</button>
+            </form>
+
+            <div class="__login-integrations">
+                <div class="title flex">
+                    <span class="line"></span>
+                    <span>ou entre com: </span>
+                    <span class="line"></span>
+                </div>
+
+                <ul class="flex">
+                    <li>
+                        <a href="">
+                            <img src="" alt="">
+                        </a>
+                    </li>
+                    <li>
+                        <a href="">
+                        <img src="" alt="">
+                        </a>
+                    </li>
+                </ul>
+            </div>
+
+            <a href="" class="button create-account">Criar Conta</a>
+
+        </div>
+    </div>
+
+    <script src="src/js/app.js" type="text/javascript"></script>
+</body>
+</html>

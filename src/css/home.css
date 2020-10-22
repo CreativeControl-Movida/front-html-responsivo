@@ -1,0 +1,191 @@
+
+/* banners */
+
+.__box-banner {
+    width: 100%;
+    height: auto;
+}
+
+.__box-banner img {
+    width: 100%;
+    height: auto;
+}
+
+/* banners */
+
+/* advantages movida */
+
+.__advantages-movida {
+    width: 100%;
+    padding: 30px 0;
+    font-family: 'Roboto', sans-serif;
+}
+
+.__advantages-movida ul {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-around;
+}
+
+.__advantages-movida h2 {
+    margin-bottom: 40px;
+}
+
+.__advantages-movida li {
+    width: calc((100%/4) - 10px);
+    margin-right: 10px;
+    align-items: center;
+    display: flex;
+}
+
+.__advantages-movida li:last-child {
+    margin-right: 0;
+}
+
+.__advantages-movida li a {
+    display: flex;
+    align-items: center;
+}
+
+.__advantages-movida li .__icon {
+    width: 60px;
+    min-width: 60px;
+    height: 60px;
+    background-color: #ff7a0b;
+    margin-right: 10px;
+    border-radius: 60px;
+    background-size: 30px 30px;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.__advantages-movida li .__icon-delivery {
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='29.48' height='29.484'%3E%3Cg data-name='Grupo 206' fill='%23fff'%3E%3Cpath data-name='Caminho 61' d='M6.334 15.291l-4.479-4.478A6.334 6.334 0 1112.67 6.334a6.292 6.292 0 01-1.855 4.479zm0-13.564a4.607 4.607 0 00-3.257 7.864l3.257 3.257 3.257-3.257a4.607 4.607 0 00-3.257-7.864z'/%3E%3Cpath data-name='Caminho 62' d='M6.334 9.213a2.879 2.879 0 112.879-2.879 2.882 2.882 0 01-2.879 2.879zm0-4.031a1.152 1.152 0 101.152 1.152 1.153 1.153 0 00-1.152-1.152z'/%3E%3Cpath data-name='Caminho 63' d='M24.874 29.484l-3.257-3.257a4.607 4.607 0 116.515 0zm-2.036-4.479l2.036 2.036 2.036-2.036a2.879 2.879 0 10-4.072 0z'/%3E%3Cpath data-name='Caminho 64' d='M20.671 29.48h-9.642a5.559 5.559 0 010-11.118h3.206a1.714 1.714 0 100-3.429h-3.351v-1.727h3.351a3.442 3.442 0 110 6.884H11.03a3.831 3.831 0 000 7.663h9.642v1.727z'/%3E%3C/g%3E%3C/svg%3E");
+}
+
+.__advantages-movida li .__icon-tax-return {
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='29.638' height='29.634'%3E%3Cpath data-name='Caminho 65' d='M29.638 5.787h-4.561l4.559-4.559L28.408 0l-5.787 5.787H0v18.06h4.561L0 28.406l1.228 1.228 5.787-5.787h22.623zM1.737 22.11V7.524h19.147l-1.736 1.737H3.473v11.112h4.561L6.3 22.11H1.737zm15.097-10.537l-5.258 5.26a3.818 3.818 0 015.258-5.26zm-6.508 6.508l-.555.555H5.21v-7.64h5.577a5.546 5.546 0 00-.462 7.085zm2.478-.022l5.259-5.259a3.818 3.818 0 01-5.263 5.26zm6.508-6.508l.555-.555h4.561v7.64H18.85a5.545 5.545 0 00.462-7.085zM27.9 22.11H8.753l1.737-1.737h15.674V9.261H21.6l1.74-1.737h4.56z' fill='%23fff'/%3E%3C/svg%3E");
+}
+
+.__advantages-movida li .__icon-qrcode {
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='29.17' height='29.17'%3E%3Cg data-name='Grupo 209'%3E%3Cpath data-name='Caminho 66' d='M0 0v10.1h10.1V0zm12.341 0v2.244h2.244V0zm2.244 2.244v2.244h-2.244v4.487h2.244V6.731h2.244V2.244zm0 6.731v3.366H4.488v2.244H2.244v2.244h4.487v-2.244h2.244v2.244h5.61v-2.244h2.244v2.244h3.366v-2.244h2.244v-2.244h-5.61V8.975zm7.853 5.61v2.244h6.732v-2.244h-2.244v-2.244h-2.244v2.244zm-20.194 0v-2.244H0v2.244zM19.072 0v10.1h10.1V0zM2.244 2.244h5.61v5.61h-5.61zm19.072 0h5.61v5.61h-5.61zM3.366 3.366v3.365h3.365V3.366zm19.072 0v3.365H25.8V3.366zm-10.1 14.585v2.244h2.244v-2.244zm2.244 2.244v2.244h-2.241v4.488h2.244v-2.245h4.488v-2.244h2.244v-2.244h2.243v2.244h-2.244v2.244h-2.244v4.488h2.244v-2.244h2.244v-2.244h1.122v2.244H23.56v2.244h2.24v-2.244h1.122v-2.244h2.248v-4.488h-2.244v-2.243h-7.854v2.244zm12.341 6.731v2.244h2.247v-2.244zm-12.341 0v2.244h2.244v-2.244zM0 19.072v10.1h10.1v-10.1zm2.244 2.244h5.61v5.61h-5.61zm1.122 1.122V25.8h3.365v-3.362z' fill='%23fff'/%3E%3C/g%3E%3C/svg%3E");
+}
+
+.__advantages-movida li .__icon-prepayment {
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='32.266' height='32.275'%3E%3Cg data-name='Grupo 207' fill='%23fff'%3E%3Cpath data-name='Caminho 67' d='M24.647 0H-.001v13.364h24.648zm-1.892 11.473H1.89V1.891h20.865z'/%3E%3Cpath data-name='Caminho 68' d='M15.049 17.146a4.734 4.734 0 00-4.33 2.831L7.382 16.64a4.728 4.728 0 00-6.686 0l-.669.669L8.715 26c1.861 1.861 4.707 1.735 7.46 1.613 2.451-.109 4.767-.211 6.039 1.061l3.564 3.6 6.484-6.925-6.266-6.266a6.576 6.576 0 00-4.68-1.939zm14.542 8.2l-3.81 4.25-2.073-2.11 4.012-4.012zm-3.208-3.208l-4.22 4.22a9.339 9.339 0 00-4.007-.7c-.681 0-1.374.031-2.061.061-2.451.108-4.766.211-6.039-1.061l-7.241-7.236a2.842 2.842 0 013.229.555l4.293 4.281v.565h7.037a3.986 3.986 0 012.837 1.175l1.337-1.337a5.865 5.865 0 00-4.174-1.729h-5a2.842 2.842 0 012.674-1.891h6.267a4.7 4.7 0 013.343 1.385z'/%3E%3Cpath data-name='Caminho 69' d='M12.355 9.518a2.837 2.837 0 10-2.837-2.837 2.84 2.84 0 002.837 2.837zm0-3.782a.946.946 0 11-.946.946.947.947 0 01.946-.946z'/%3E%3Cpath data-name='Caminho 70' d='M5.736 5.736h1.891v1.891H5.736z'/%3E%3Cpath data-name='Caminho 71' d='M17.083 5.736h1.891v1.891h-1.891z'/%3E%3C/g%3E%3C/svg%3E");
+}
+
+.__advantages-movida li .__info {
+    color: #000;
+}
+
+.__advantages-movida li h3 {
+    font-size: 14px;
+    text-transform: uppercase;
+    color: #000;
+    margin-bottom: 5px;
+}
+
+.__advantages-movida li span {
+    font-size: 12px;
+    color: #000;
+}
+
+/* advantages movida */
+
+
+/*  most chosen */
+
+.__most-chosen {
+    padding: 40px 0;
+    font-family: 'Roboto', sans-serif;
+}
+
+.__most-chosen h2 {
+    margin-bottom: 20px;
+}
+
+.__most-chosen h3 {
+    color: #000;
+    font-size: 16px;
+    text-transform: uppercase;
+    margin-bottom: 15px;
+}
+
+.__most-chosen ul {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.__most-chosen ul a{
+  display: flex;
+  flex-direction: column;
+}
+
+.__most-chosen li {
+    width: 230px;
+    max-width: 100vw;
+}
+
+.__most-chosen li.active {
+    width: 400px;
+}
+
+.__most-chosen li .__info {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.__most-chosen li .__info span {
+    font-size: 14px;
+    color: #000;
+    text-align: center;
+    width: 200px;
+    margin-bottom: 15px;
+}
+
+.__most-chosen li .__info button {
+    width: 95px;
+    height: 30px;
+    background-color: #ff7a0b;
+    border-radius: 7px;
+    color: #fff;
+    min-width: 50px;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.__most-chosen li img {
+  width: 100%;
+  margin-bottom: 15px;
+}
+
+/* end most chosen */
+
+@media screen and (max-width: 768px) {
+  .__box-reservation{
+    padding: 75px 0 30px 0;
+  }
+
+  .__advantages-movida ul{
+    flex-direction: column;
+    justify-content: start;
+  }
+
+  .__advantages-movida li {
+    width: auto;
+    margin-right: 0px;
+    padding: 0px 20px;
+  }
+
+  .__advantages-movida li+li{
+    margin-top: 30px;
+  }
+  .__most-chosen ul {
+    flex-direction: column;
+    justify-content: start;
+    align-items: center;
+  }
+}

@@ -1,0 +1,70 @@
+.portal {
+    margin-bottom: 40px;
+}
+
+
+.portal h2{
+    color: #F97D00;
+    margin-top: 60px;
+    margin-bottom: 60px;
+}
+
+.portal h2{
+    color: #F97D00;
+    text-align: center;
+}
+
+.__list-portal{
+  flex-flow: row wrap;
+  justify-content: space-evenly;
+}
+
+.__list-portal li {
+    width: 255px;
+    border: 1px solid #707070;
+    border-radius: 50px;
+    padding: 30px 25px;
+    margin: 0 10px 40px;
+}
+
+.__list-portal h3 {
+    font-size: 16px;
+    color: #F97D00;
+    font-weight: 900;
+    margin-bottom: 20px;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+.__list-portal p  {
+    font-size: 12px;
+    color: #000;
+    font-weight: 400;
+    margin-bottom: 25px;
+    line-height: 1.3;
+    
+}
+
+.__list-portal a  {
+    display: flex;
+    align-items: center;
+    font-weight: bold;
+    color: #fff;
+    font-size: 14px;
+    background: #F97D00;
+    height: 30px;
+    justify-content: center;
+    border-radius: 10px;
+    transition: all 500ms;
+    letter-spacing: 1px;
+}
+
+.__list-portal a:hover {
+    opacity: 0.8;
+}
+
+@media screen and (max-width: 768px) {
+  .__box-reservation{
+    padding: 75px 0 30px 0;
+  }
+}

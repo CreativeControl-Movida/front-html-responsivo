@@ -1,0 +1,430 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;1,700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="src/css/app.css" />
+    <link rel="stylesheet" href="src/css/home.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+
+    <!-- header -->
+    <header class="__header">
+        <!-- Top Navigation Menu -->
+        <div class="topnav">
+          <div class="main-nav">
+            <a href="./home.html">
+              <img src="./src/assets/logo-movida-white.png" alt="Movida Aluguél de Carros" class="logo-image">
+            </a>
+
+            <div class="flex">
+                  
+              <div class="header-language">
+                <i class="__icon __icon-language"></i>
+                <select name="language" id="language">
+                  <option value="portuguese" selected>Português</option>
+                </select>
+              </div>
+
+              <!-- "Hamburger menu" / "Bar icon" to toggle the navigation links -->
+              <a href="javascript:void(0);" class="icon" onclick="toggleNavBar()">
+                <i class="fa fa-bars"></i>
+              </a>
+            </div>
+          </div>
+
+          <!-- Navigation links (hidden by default) -->
+          <nav id="myLinks" class="removed">
+            <ul>
+              <li><a href="#signup">Cadastre-se</a></li>
+              <li><a href="#login" class="login">Login</a> </li>
+              <li><a href="#rent">Como alugar</a></li>
+              <li><a href="#cartypes">Tipos de carros</a></li>
+              <li><a href="#rentplan">Planos de aluguéis</a></li>
+              <li><a href="#discover">Descubra seu tipo ideal</a></li>
+              <li><a href="#services">Serviços disponíveis</a></li>
+              <li><a href="#findshop">Encontre uma loja</a></li>
+            </ul>
+          </nav>
+        </div>
+
+        <div class="container">
+            <div class="__header-top flex">
+                <nav>
+                    <ul class="flex">
+                      <li><a href="" class="login">Login</a></li>
+                        <li class="select-language"><i class="__icon __icon-language"></i>Português</li>
+                    </ul>
+                </nav>
+            </div>
+
+            <div class="__header-bottom flex">
+                <h1 class="__header-logo">
+                    Movida Aluguel de Carros 
+                </h1>
+
+                <nav class="__header-menu flex">
+                    <ul class="flex just-space-bet">
+                        <li><a href="">COMO ALUGAR?</a></li>
+                        <li><a href="">TIPOS DE CARROS</a></li>
+                        <li><a href="">PLANOS DE ALUGUÉIS</a></li>
+                        <li><a href="">DESCUBRA SEU TIPO IDEAL</a></li>
+                        <li><a href="">SERVIÇOS DISPONÍVEIS</a></li>
+                        <li><a href="">ENCONTRE UMA LOJA</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </header>
+    <!-- end header -->
+
+    <!-- box reservation -->
+    <div class="__box-reservation">
+        <div class="container flex flex-col">
+            <h2>Aluguéis com reservas flexíveis</h2>
+
+            <form action="/" method="post" class="__box-reservation-form">
+
+                <!-- <p>
+                    <input type="checkbox" id="check-devolution" />
+                    <label for="check-devolution">Devolver no mesmo local de retirada</label>
+                </p> -->
+
+                <div class="__box-reservation-only">
+                    <div class="inputs">
+                      <p class="location">
+                          <label for="pickup-location">Local de Retirada</label>
+                          <input type="text" id="pickup-location" placeholder="Digite o local de retirada" />
+                      </p>
+                      <p class="location">
+                          <label for="devolution-location">Local de Devolução</label>
+                          <input type="text" id="devolution-location"  placeholder="Digite o local de devolução"/>
+                      </p>
+                      <p class="date">
+                          <label for="pickup-date">Data de Retirada</label>
+                          <input type="date" id="pickup-date" placeholder="Escolha uma data" />
+                      </p>
+                      <p class="date">
+                          <label for="devolution-date">Data de Entrega</label>
+                          <input type="date" id="devolution-date" placeholder="Escolha uma data" />
+                      </p>
+                    </div>
+                    <div class="flex just-center">
+                      <p>
+                          <button class="btn-search-car" >BUSCAR</button>
+                      </p>
+                    </div>
+                </div>
+
+                <!-- <p>
+                    <input type="checkbox"  id="check-coupon-discount" />
+                    <label for="check-coupon-discount">Tenho um cupom de desconto</label>
+                </p> -->
+
+            </form>
+        </div>
+    </div>
+    <!-- end box resevation -->
+
+    <!-- home -->
+    <main class="home">
+        <section class="__box-banner">
+            <a href="">
+                <img src="src/assets/banner-main.jpg"/>
+            </a>
+        </section>
+
+        <section class="__advantages-movida">
+            <div class="container">
+                <h2 class="__title-section">VANTAGENS DE ALUGAR NA MOVIDA</h2>
+                <ul>
+                    <li>
+                        <a href="">
+                            <div class="__icon __icon-delivery"></div>
+                            <div class="__info">
+                                <h3>DELIVERY E COLLECTION</h3>
+                                <span>Serviço de entrega e retirada em local previamente acordado.</span>
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="">
+                            <div class="__icon __icon-tax-return"></div>
+                            <div class="__info">
+                                <h3>ISENÇÃO DA TAXA DE RETORNO</h3>
+                                <span>Isenção da taxa de retorno para devolução em outra loja da mesma região metropolitana. </span>
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="">
+                            <div class="__icon __icon-qrcode"></div>
+                            <div class="__info">
+                                <h3>QR CODE</h3>
+                                <span>1º locadora de carros brasileira a oferecer a retirada do carro mediante apresentação de QR Code </span>
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="">
+                            <div class="__icon __icon-prepayment"></div>
+                            <div class="__info">
+                                <h3>PRÉ-PAGO</h3>
+                                <span>O cliente que realiza o pré-pagamento da reserva no App e Site possui desconto de 5% no valor das diárias. </span>
+                            </div>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </section>
+
+        <section class="__most-chosen">
+            <div class="container">
+                <h2 class="__title-section">CARROS MAIS ESCOLHIDOS</h2>
+                <ul>
+                    <li class="">
+                        <a class="" href="">
+                            <img src="src/assets/slider-main-product-one.png" />
+                            <div class="__info">
+                                <h3>GRUPO BX - ECONÔMICO PLUS</h3>
+                                <span>Para quem busca sofisticação, sem abrir mão de economia.</span>
+                                <button>Ver mais</button>
+                            </div>
+                        </a>
+                    </li>
+                    <li class="active">
+                        <a href="">
+                            <img src="src/assets/slider-main-product-two.png" />
+                            <div class="__info">
+                                <h3>GRUPO BX - ECONÔMICO PLUS</h3>
+                                <span>Para quem busca sofisticação, sem abrir mão de economia.</span>
+                                <button>Ver mais</button>
+                            </div>
+                        </a>
+                    </li>
+                    <li class="">
+                        <a href="">
+                            <div class="__box-image">
+                                <img src="src/assets/slider-main-product-three.png" />
+                            </div>
+                            <div class="__info">
+                                <h3>GRUPO BX - ECONÔMICO PLUS</h3>
+                                <span>Para quem busca sofisticação, sem abrir mão de economia.</span>
+                                <button>Ver mais</button>
+                            </div>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </section>
+
+        <section class="__box-banner">
+            <a href="">
+                <img src="src/assets/banner-our-stores.jpg"/>
+            </a>
+        </section>
+    </main>
+    <!-- end home -->
+
+    <!-- newsletter -->
+    <div class="__newsletter">
+        <div class="container">
+            <div class="__box-news"> 
+                <p>Cadastre seu email e receba ofertas especiais pensadas para você</p>
+                <form action="">
+                  <input type="text" id="email-newsletter" placeholder="Digite seu email aqui" />
+
+                  <button>Enviar</button>
+                </form>
+            </div>
+        </div>
+    </div>
+    <!-- end newsletter -->
+
+
+    <!-- footer -->
+    <footer>
+        <div class="container">
+            <div class="map-site">
+                <div class="__col __col-one">
+                    <ul>
+                        <li>
+                            <h4>INSTITUCIONAL</h4>
+                        </li>
+                        <li><h5><a href="">Sobre nós</a></h5></li>
+                        <li><h5><a href="">Carreiras</a></h5></li>
+                    </ul>
+                    <ul>
+                        <li>
+                            <h4>SEGURANÇA</h4>
+                        </li>
+                        <li><h5><a href="">Privacidade e Segurança</a></h5></li>
+                        <li><h5><a href="">Termos e condições</a></h5></li>
+                    </ul>
+                </div>
+                <div class="__col __col-two">
+                    <ul>
+                        <li>
+                            <h4>PARA EMPRESAS</h4>
+                        </li>
+                        <li><h5><a href="">Terceirize sua frota</a></h5></li>
+                    </ul>
+                    <ul>
+                        <li>
+                            <h4>RELACIONAMENTO</h4>
+                        </li>
+                        <li><h5><a href="">Portal do colaborador</a></h5></li>
+                        <li><h5><a href="">Portal B2B</a></h5></li>
+                        <li><h5><a href="">Perguntas frequentes</a></h5></li>
+                    </ul>
+                </div>
+                <div class="__col __col-three">
+                    <ul>
+                        <li>
+                            <h4>NOSSOS SERVIÇOS</h4>
+                        </li>
+                        <li><h5><a href="">Aluguel eventual</a></h5></li>
+                        <li><h5><a href="">Aluguel mensal</a></h5></li>
+                        <li><h5><a href="">Aluguel anual</a></h5></li>
+                        <li><h5><a href="">Pré-pago Movida</a></h5></li>
+                        <li><h5><a href="">Seminovos Movida</a></h5></li>
+                        <li><h5><a href="">Movida ZeroKM</a></h5></li>
+                    </ul>
+                </div>
+                <div class="__col __col-four">
+                    <ul>
+                        <li>
+                            <h4>ATENDIMENTO</h4>
+                            <span>
+                                Segunda a Sábado as 8h as 19h <br/>
+                                <a href="">0800 606 8686</a>
+                            </span>
+                        </li>
+                        <li>
+                            <h4>REDES SOCIAIS </h4>
+                            <ul class="social">
+                                <li class="__icon __icon-instagram"><a href=""></a></li>
+                                <li class="__icon __icon-facebook"><a href=""></a></li>
+                                <li class="__icon __icon-twitter"><a href=""></a></li>
+                                <li class="__icon __icon-youtube"><a href=""></a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+                <div class="__app-col __col-five app">
+                    <div class="banner-app">
+                        <img src="src/assets/min-banner-app.png" alt="" />
+                    </div>
+                    <div class="__description-app">
+                        <span>Baixe grátis o aplicativo Movida  e tenha acesso a descontos exclusivos!</span>
+                        <a href=""><img src="src/assets/app-apple.jpg" /></a>
+                        <a href=""><img src="src/assets/app-google.jpg" /></a>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        
+        <ul class="__banners-services">
+            <li>
+                <a href="">
+                    <img src="src/assets/logo-movida-white.png" />
+                    <div class="text">
+                        <p>Opções mais novas e completas para 
+                            você encontrar o carro perfeito.</p>
+                        <span>Saiba mais >></span>
+                    </div>
+                </a>
+            </li>
+            <li>
+                <a href="">
+                    <img src="src/assets/logo-movida-frotas-white.png" />
+                    <div class="text">
+                        <p>Opções mais novas e completas para 
+                            você encontrar o carro perfeito.</p>
+                        <span>Saiba mais >></span>
+                    </div>
+                </a>
+            </li>
+            <li>
+                <a href="">
+                    <img src="src/assets/logo-movida-seminovos.png" />
+                    <div class="text">
+                        <p>Opções mais novas e completas para 
+                            você encontrar o carro perfeito.</p>
+                        <span>Saiba mais >></span>
+                    </div>
+                </a>
+            </li>
+        </ul>
+
+        <div class="copyright">
+            <div class="container">
+                <small class="span">
+                    © 2020 Movida Aluguel de Carros | Todos os direitos reservados.
+                </small>
+                <small>
+                    Use o cinto de segurança
+                </small>
+            </div>
+        </div>
+    </footer>
+    <!-- end footer -->
+
+    <div class="__modal-login">
+        <div class="__modal-login-overlay"></div>
+        <div class="__modal-login-box">
+            <div class="message-discount">
+                <p>Faça login ou cadastre-se para ter <strong>5% de 
+                    desconto</strong> na sua locação. </p>
+            </div>
+
+            <h3>Acesse sua conta</h3>
+
+            <form action="">
+                <p>
+                    <input type="text" id="user-login" placeholder="CPF ou Passaporte" />
+                </p>
+
+                <p>
+                    <input id="password-login" type="password" placeholder="Senha" />
+                    <span class="change-type-password"></span>
+                </p>
+
+                <span class="remember-password">Esqueci minha senha</span>
+
+                <button>ENTRAR</button>
+            </form>
+
+            <div class="__login-integrations">
+                <div class="title flex">
+                    <span class="line"></span>
+                    <span>ou entre com: </span>
+                    <span class="line"></span>
+                </div>
+
+                <ul class="flex">
+                    <li>
+                        <a href="">
+                            <img src="" alt="">
+                        </a>
+                    </li>
+                    <li>
+                        <a href="">
+                        <img src="" alt="">
+                        </a>
+                    </li>
+                </ul>
+            </div>
+
+            <a href="" class="button create-account">Criar Conta</a>
+
+        </div>
+    </div>
+
+    <script src="src/js/app.js" type="text/javascript"></script>
+</body>
+</html>

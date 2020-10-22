@@ -1,0 +1,923 @@
+/* Init Reset */
+*{
+  padding:0;
+  margin: 0;
+  box-sizing: border-box;
+  line-height: 1;
+  outline: 0;
+  border: none;
+  --main-bg-color: #f97d00;
+}
+
+body, html{
+    overflow-x: hidden;
+    font-family: 'Roboto', sans-serif;
+}
+
+ul{list-style: none;}
+a{text-decoration: none;}
+/* End Reset */
+
+/* Behaviors */
+
+.removed{
+  display: none;
+}
+
+/* End Behaviors */
+
+/* Structure */
+.flex{display: flex;}
+
+.flex-col{flex-direction: column;}
+
+.just-center{justify-content: center;}
+
+.just-space-bet{justify-content: space-between;}
+
+.align-center{align-items: center;}
+
+.container{
+  max-width: 1170px;
+  margin: 0 auto;
+}
+/* End Structure*/
+
+
+/* header */
+
+.__header {
+    background-color: var(--main-bg-color);
+    font-family: 'Roboto', sans-serif;
+}
+
+.__header-top {
+    flex-direction: row-reverse;
+}
+
+.__header-top nav {
+    width: 300px;
+    max-width: 300px;
+    background-color: rgba(255, 255, 255, .3);
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
+    padding: 12px 0 12px 25px;
+    position: relative;
+}
+
+.__header-top nav:after {
+    content: '';
+    width: 1000px;
+    height: 39px;
+    background-color: rgba(255, 255, 255, .3);
+    position: absolute;
+    left: 300px;
+    top: 0;
+}
+
+.__header-top ul {
+    justify-content: space-around;
+}
+
+.__header-top li {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+
+.__header-top li.select-language:after {
+    content: '';
+    display: inline-block;
+    width: 10px;
+    height: 5px;
+    background-image: url("data:image/svg+xml,%3Csvg data-name='Grupo 91' xmlns='http://www.w3.org/2000/svg' width='7.749' height='4.577'%3E%3Cg data-name='Grupo 90'%3E%3Cpath data-name='Caminho 164' d='M7.625.383L7.371.127a.425.425 0 00-.6 0l-2.9 2.9-2.9-2.9a.425.425 0 00-.6 0L.117.381a.424.424 0 000 .6l3.451 3.464a.433.433 0 00.3.136.433.433 0 00.3-.136L7.616.991a.428.428 0 00.124-.3.424.424 0 00-.115-.308z' fill='%23fff'/%3E%3C/g%3E%3C/svg%3E");
+    background-size: 100% 100%;
+    margin-left: 5px;
+}
+
+.__header-top a, .__header-top li {
+    font-size: 12px;
+    color: #fff;
+}
+
+.__header-bottom {
+    justify-content: space-between;
+    padding: 30px 16px;
+}
+
+.__header-logo {
+    font-size: 0;
+    min-width: 140px;
+    max-width: 140px;
+    width: 140px;
+    height: 50px;
+    background-image: url('../assets/logo-movida-white.png');
+    background-size: 100% 100%;
+}
+
+.__header-menu {
+    align-items: center;
+}
+
+.__header-menu li {
+    margin: 0 12.5px;
+    text-align: center;
+}
+
+.__header-menu li:last-child {
+    margin-right: 0;
+}
+
+.__header-menu a {
+    font-size: 14px;
+    font-weight: 600;
+    color: #fff;
+}
+
+.__header .__icon {
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12.4' height='12.43'%3E%3Cpath data-name='Caminho 163' d='M6.2 0a6.215 6.215 0 106.2 6.215A6.208 6.208 0 006.2 0zm5.362 8.392L9.8 8.7a9.3 9.3 0 00.324-2.275h1.858a5.774 5.774 0 01-.419 1.97zM.418 6.422h1.859A9.3 9.3 0 002.6 8.7L.837 8.4a5.774 5.774 0 01-.419-1.97zm.42-2.384l1.763-.3a9.3 9.3 0 00-.324 2.275H.418a5.774 5.774 0 01.419-1.97zm5.569-.711a14.183 14.183 0 012.215.2l.729.126a8.913 8.913 0 01.359 2.355h-3.3zm2.286-.206a14.614 14.614 0 00-2.286-.209V.426C7.591.54 8.621 1.628 9.2 3.21zm-2.7-.209a14.612 14.612 0 00-2.286.209L3.2 3.21C3.779 1.627 4.808.539 5.993.425zm-2.215.617a14.18 14.18 0 012.215-.2v2.679H2.69a8.913 8.913 0 01.359-2.353zM2.69 6.422h3.3V9.1a14.184 14.184 0 01-2.215-.2l-.729-.126a8.913 8.913 0 01-.356-2.352zm1.017 2.887a14.663 14.663 0 002.286.21v2.486c-1.185-.114-2.214-1.2-2.8-2.784zm2.7.21a14.662 14.662 0 002.286-.21l.507-.088c-.583 1.583-1.612 2.671-2.8 2.784zM8.622 8.9a14.18 14.18 0 01-2.215.2V6.422h3.3a8.913 8.913 0 01-.359 2.353zm1.5-2.893A9.3 9.3 0 009.8 3.733l1.763.3a5.774 5.774 0 01.419 1.97zm1.23-2.427l-1.69-.292A5.714 5.714 0 008.019.71a5.818 5.818 0 013.334 2.872zM4.381.71a5.714 5.714 0 00-1.644 2.579l-1.69.292A5.818 5.818 0 014.381.709zM1.047 8.849l1.69.292a5.714 5.714 0 001.644 2.579 5.818 5.818 0 01-3.334-2.871zm6.972 2.872a5.714 5.714 0 001.644-2.58l1.69-.292a5.818 5.818 0 01-3.334 2.872zm0 0' fill='%23fff'/%3E%3C/svg%3E");
+    width: 15px;
+    height: 15px;
+    background-size: 100%;
+    margin-right: 5px;
+    display: inline-block;
+}
+
+/* end header */
+
+/* burguer menu */
+.topnav {
+  background: var(--main-bg-color);
+  position: fixed;
+  top: 0; /* Position the navbar at the top of the page */
+  width: 100%; /* Full width */
+  display: none; /*initially invisible*/
+  flex-direction: column;
+  overflow: hidden;
+}
+
+.topnav .main-nav{
+  display: flex;
+  align-items: stretch;
+  height: 45px;
+  justify-content: space-between;
+}
+
+.topnav a{
+  text-decoration: none;
+  color: inherit;
+  font-size: 17px;
+  max-height: 45px;
+}
+
+.topnav .header-language{
+  display: flex;
+  align-items: center;
+  color: white;
+  background-color: rgba(255, 255, 255, .3);
+  padding: 0 20px;
+  border-radius: 30px 0 0 30px;
+  font-size: 14px;
+}
+
+.topnav .header-language select{
+  background: none;
+  color: white;
+  cursor: pointer;
+  font-size: 1em;
+}
+
+.topnav a .logo-image{
+  height: 40px;
+  padding: 2px 10px;
+}
+
+.topnav a.icon {
+  display: flex;
+  align-items: center;
+  padding: 0 16px;
+  background: #333;
+  color: white;
+}
+
+.topnav a.icon:hover{
+  background-color: #fdfdfd;
+  color: black;
+}
+
+.topnav #myLinks {
+  background-color: #333;
+  color: white;
+}
+
+.topnav #myLinks li{
+  cursor: pointer;
+  display: flex;
+}
+
+.topnav #myLinks li:hover{
+  background-color: #fdfdfd;
+  color: black;
+}
+
+.topnav #myLinks li a{
+  padding: 14px 16px;
+  flex-basis: 100%;
+}
+
+/* end burguer menu*/
+
+/*  box reservation */
+
+.__box-reservation {
+    background: #333;
+    padding: 30px 20px;
+    font-family: 'Roboto', sans-serif;
+    color: #fff;
+}
+
+.__box-reservation h2 {
+    font-size: 25px;
+    font-weight: 400;
+    margin-bottom: 30px;
+}
+
+.__box-reservation p {
+    display: flex;
+}
+
+.__box-reservation-form {
+    font-size: 14px;
+}
+
+.__box-reservation-form > p {
+    align-items: center;
+}
+
+.__box-reservation-form > p:last-child {
+    margin-bottom: 0;
+}
+
+.__box-reservation-form input[type="checkbox"] {
+    margin-right: 10px;
+}
+
+.__box-reservation-form p {
+    margin-bottom: 20px;
+}
+
+.__box-reservation-form input {
+    border-radius: 8px;
+}
+
+.__box-reservation-form label {
+    cursor: pointer;
+}
+
+.__box-reservation-only {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.__box-reservation-only .inputs{
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+}
+
+.__box-reservation-only p {
+    flex-direction: column;
+    justify-content: flex-end;
+}
+
+.__box-reservation-only label {
+    margin-bottom: 5px;
+}
+
+.__box-reservation-only input {
+    height: 35px;
+    padding-left: 15px;
+    color: #000;
+}
+
+.__box-reservation-only .location {
+    width: 280px;
+}
+
+.__box-reservation-only .date {
+    width: 175px;
+}
+
+.__box-reservation-only button {
+    height: 35px;
+    width: 175px;
+    background-color: #ff7a0b;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: 600;
+    color: #fff;
+}
+
+/* end box reservation */
+
+/* components */
+
+.__title-section{
+    font-size: 18px;
+    text-transform: uppercase;
+    color: #000;
+    text-align: center;
+    font-family: 'Roboto', sans-serif;
+}
+
+.__description-page {
+    margin-top: 50px;
+    margin-bottom: 25px;
+}
+
+.__description-page h2 {
+    font-size: 24px;
+    text-transform: uppercase;
+    margin-bottom: 5px;
+}
+
+.__description-page p {
+    font-size: 18px;
+}
+
+button{cursor:pointer;}
+
+/* end components */
+
+/* newsletter */
+
+.__newsletter {
+    background-color: #f2f2f2;
+    font-family: 'Roboto', sans-serif;
+    z-index: -1;
+}
+
+.__newsletter .__box-news {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    padding: 20px 30px;
+}
+
+.__newsletter .__box-news > p {
+    font-size: 14px;
+    width: 50%;
+    color: #858585;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.__newsletter .__box-news > p::before {
+    content: '';
+    width: 40px;
+    height: 40px;
+    background: #858585;
+    display: inline-block;
+    margin-right: 10px;
+    border-radius: 30px;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24.744' height='17.398'%3E%3Cg data-name='Grupo 14'%3E%3Cg data-name='Grupo 13'%3E%3Cpath data-name='Caminho 72' d='M0 1.054v15.292l8.737-7.645z' fill='%23fff'/%3E%3C/g%3E%3C/g%3E%3Cg data-name='Grupo 16'%3E%3Cg data-name='Grupo 15'%3E%3Cpath data-name='Caminho 73' d='M1.094 0L12.42 9.91 23.746 0z' fill='%23fff'/%3E%3C/g%3E%3C/g%3E%3Cg data-name='Grupo 18'%3E%3Cg data-name='Grupo 17'%3E%3Cpath data-name='Caminho 74' d='M14.906 9.662l-2.486 2.175-2.486-2.175-8.841 7.736h22.654z' fill='%23fff'/%3E%3C/g%3E%3C/g%3E%3Cg data-name='Grupo 20'%3E%3Cg data-name='Grupo 19'%3E%3Cpath data-name='Caminho 75' d='M16.007 8.699l8.737 7.645V1.054z' fill='%23fff'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 25px auto;
+}
+
+.__newsletter .__box-news form {
+    display: flex;
+    width: 50%;
+    align-items: center;
+    justify-content: center;
+}
+
+.__newsletter .__box-news form > p {
+    width: 350px;
+    min-width: 350px;
+    margin-right: 10px;
+}
+
+.__newsletter .__box-news form label {
+    font-size: 14px;
+    color: #707070;
+    position: absolute;
+    top: 5px;
+    left: 10px;
+    font-style: italic;
+}
+
+.__newsletter .__box-news form input {
+    height: 30px;
+    flex-grow: 1;
+    max-width: 500px;
+    margin: 0px 10px;
+    line-height: 30px;
+    border-bottom: 2px solid #707070;
+    background: transparent;
+}
+
+.__newsletter .__box-news form button {
+    width: 130px;
+    background: var(--main-bg-color);;
+    height: 30px;
+    color: #fff;
+    font-weight: bold;
+    border-radius: 8px;
+    font-size: 14px;
+}
+
+/* end newsletter */
+
+
+
+
+/* footer */
+
+footer {
+    font-family: 'Roboto', sans-serif;
+}
+
+footer ul {
+    margin-bottom: 20px;
+}
+
+footer a {
+    color: #000;
+}
+
+footer h4 {
+    color: #000;
+    margin-bottom: 10px;
+    width: auto;
+    font-size: 14px;
+}
+
+footer h4:after {
+    content: '';
+    display: block;
+    width: 100px;
+    background: orange;
+    margin-top: 5px;
+    height: 3px;
+}
+
+footer h5 {
+    font-weight: 400;
+    margin-bottom: 5px;
+}
+
+footer h5 a {
+    font-size: 12px;
+    color: #000;
+    margin-bottom: 5px;
+    font-weight: 400;
+}
+
+footer .__icon {
+    width: 30px;
+    min-width: 30px;
+    background-size: 30px auto;
+    background-repeat: no-repeat;
+    height: 30px;
+    margin-right: 10px;
+    background-position: center;
+}
+
+footer .__icon-instagram {
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='25.491' height='25.491'%3E%3Cpath data-name='Caminho 51' d='M21.757 0H3.734A3.738 3.738 0 000 3.734v18.023a3.738 3.738 0 003.734 3.734h18.023a3.738 3.738 0 003.734-3.734V3.734A3.738 3.738 0 0021.757 0zM12.8 19.417a6.721 6.721 0 116.716-6.717 6.729 6.729 0 01-6.716 6.717zm7.463-11.949a2.24 2.24 0 112.24-2.24 2.243 2.243 0 01-2.24 2.24zm0 0'/%3E%3Cpath data-name='Caminho 52' d='M20.263 4.481a.747.747 0 10.747.747.747.747 0 00-.747-.747zm0 0'/%3E%3Cpath data-name='Caminho 53' d='M12.796 7.468a5.228 5.228 0 105.228 5.228 5.234 5.234 0 00-5.228-5.228zm0 0'/%3E%3C/svg%3E");
+}
+
+footer .__icon-facebook {
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='25.491' height='25.491'%3E%3Cpath d='M21.757 0H3.734A3.738 3.738 0 000 3.734v18.023a3.738 3.738 0 003.734 3.734h7.518v-9.012H8.265V12h2.987V8.962a4.486 4.486 0 014.481-4.481h4.531v4.481h-4.531V12h4.531l-.747 4.481h-3.784v9.011h6.024a3.738 3.738 0 003.734-3.734V3.734A3.738 3.738 0 0021.757 0zm0 0'/%3E%3C/svg%3E");
+}
+
+footer .__icon-twitter {
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='25.491' height='20.863'%3E%3Cpath d='M9.51 20.863a21.873 21.873 0 01-3.378-.263 15.855 15.855 0 01-4.621-1.682L0 18.087l1.635-.538c1.787-.588 2.875-.952 4.221-1.523a5.615 5.615 0 01-2.886-3.344l-.38-1.155.312.048a5.672 5.672 0 01-.71-.876 5.378 5.378 0 01-.912-3.2l.07-1.006.6.234a5.642 5.642 0 01-.547-1.532 5.831 5.831 0 01.621-3.926L2.554.3l.7.844a12.939 12.939 0 008.382 4.719 5.014 5.014 0 01.3-2.663A4.987 4.987 0 0113.971.88a6.09 6.09 0 013.534-.868 5.645 5.645 0 013.47 1.431 11.649 11.649 0 001.27-.424c.278-.1.594-.224.99-.36l1.456-.5-.95 2.712c.063-.005.127-.01.195-.013l1.555-.07-.919 1.256c-.053.072-.066.092-.085.121-.074.112-.166.25-1.428 1.935a2.376 2.376 0 00-.444 1.547 14.636 14.636 0 01-.8 5.886 10.417 10.417 0 01-2.8 4.142 12.35 12.35 0 01-5.854 2.83 18.022 18.022 0 01-3.656.359zm0 0'/%3E%3C/svg%3E");
+}
+
+footer .__icon-youtube {
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='26.856' height='20.457'%3E%3Cpath data-name='Caminho 76' d='M22.922 0H3.934A3.939 3.939 0 000 3.934v12.589a3.939 3.939 0 003.934 3.934h18.988a3.939 3.939 0 003.934-3.934V3.934A3.939 3.939 0 0022.922 0zM9.494 15.653V4.957l9.468 5.259zm0 0'/%3E%3Cpath data-name='Caminho 77' d='M11.068 7.631v5.3l4.695-2.695zm0 0'/%3E%3C/svg%3E");
+}
+
+footer .__col {
+    width: 200px;
+}
+
+footer .__app-col{
+  width: 400px;
+}
+
+footer .__col-four li {
+    margin-bottom: 20px;
+}
+
+footer .map-site {
+    display: flex;
+    flex-flow: row wrap;
+    padding: 40px 0 10px 0;
+    justify-content: center;
+}
+
+footer span {
+    color: #000;
+    font-size: 12px;
+}
+
+footer .social {
+    display: flex;
+}
+
+footer .banner-app {
+    min-width: 200px;
+    width: 200px;
+    margin-right: 15px;
+    height: 120px;
+}
+
+footer .banner-app img {
+    width: 100%;
+}
+
+footer .app {
+    display: flex;
+}
+
+footer .__description-app {
+    min-width: 150px;
+    display: flex;
+    flex-direction: column;
+}
+
+footer .__description-app span {
+    font-size: 12px;
+    margin-bottom: 10px;
+}
+
+footer .__description-app a {
+    margin-bottom: 10px;
+    width: 100%;
+    display: block;
+}
+
+footer .__description-app a img {
+    width: 100px;
+}
+
+footer .__banners-services {
+    display: flex;
+    margin-bottom: 0;
+}
+
+footer .__banners-services li {
+    width: calc(100%/3);
+    display: flex;
+    padding: 20px 0px;
+    align-items: center;
+    justify-content: center;
+}
+
+footer .__banners-services li:nth-child(1) {
+    background: var(--main-bg-color);;
+}
+
+footer .__banners-services li:nth-child(2) {
+    background: #252729;
+}
+
+footer .__banners-services li:nth-child(3) {
+    background: #8a00ab;
+}
+
+footer .__banners-services img {
+    width: 150px;
+    min-width: 150px;
+    height: auto;
+    margin-right: 15px;
+}
+
+footer .__banners-services a {
+    display: flex;
+    padding-left: 30px;
+    padding-right: 30px;
+    color: #fff;
+    align-items: center;
+}
+
+footer .__banners-services p {
+    color: #fff;
+}
+
+footer .__banners-services .text {
+    display: flex;
+    flex-direction: column;
+}
+
+footer .__banners-services .text span {
+    text-align: right;
+    color: #fff;
+    margin-top: 20px;
+    font-size: 14px;
+}
+
+footer .copyright {
+    padding-top: 20px;
+    padding-bottom: 20px;
+    text-align: center;
+}
+
+footer .copyright .container {
+    display: flex;
+    justify-content: space-between;
+    max-width: 810px;
+}
+
+footer .copyright small {
+    color: #000;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+}
+
+footer .copyright small:nth-child(2):before {
+    content: '';
+    width: 25px;
+    height: 25px;
+    display: inline-block;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' width='39' height='35'%3E%3Cimage width='39' height='35' xlink:href='data:image/png;base64,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'/%3E%3C/svg%3E");
+    background-size: 25px 25px;
+    margin-right: 10px;
+}
+
+/* end footer */
+
+/* login */
+
+.__modal-login{
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  width: 100vw;
+  height: 100vh;
+  display: none;
+}
+
+.__modal-login.active{
+  display: flex;
+  justify-content: center;
+}
+
+.__modal-login-overlay{
+  width: 100%;
+  height: 100vh;
+  position: absolute;
+  background: rgba(0,0,0,0.6);
+  z-index: -1;
+  cursor: pointer;
+}
+
+.__modal-login-box{
+  display: flex;
+  flex-direction: column;
+  width: 395px;
+  background-color: #fff;
+  border-radius: 30px;
+  padding: 30px;
+  margin: 20px 0;
+  max-height: 550px;
+  overflow-y: auto;
+}
+
+.__modal-login-box::-webkit-scrollbar {
+  display: none;
+}
+
+.__modal-login-box .message-discount{
+  background: #F2EEEE; 
+  padding: 15px 30px;
+  margin-bottom: 20px;
+}
+
+.__modal-login-box h3{
+  text-align: center;
+  margin-bottom: 25px;
+}
+
+.__modal-login-box form input{
+  border: 2px solid #C6C3C3;
+  height: 40px;
+  width: 100%;
+  padding-left: 45px;
+  color: #000;
+  margin-bottom: 20px;
+  border-radius: 12px;
+  font-size: 14px;
+}
+
+.__modal-login-box form p{
+  position: relative;
+}
+
+.__modal-login-box form p:nth-child(1)::before{
+  position: absolute;
+  left: 6px;
+  top: 2px;
+  content: '';
+  display: block;
+  width: 35px;
+  height: 35px;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='33.605' height='33.605'%3E%3Cpath data-name='Caminho 100' d='M13.603 16.802a2.721 2.721 0 002.8-2.8 2.721 2.721 0 00-2.8-2.8 2.721 2.721 0 00-2.8 2.8 2.72 2.72 0 002.8 2.8z' fill='%23626262'/%3E%3Cpath data-name='Caminho 101' d='M28 5.601H5.6a2.72 2.72 0 00-2.8 2.625v17.153a2.72 2.72 0 002.8 2.622H28a2.72 2.72 0 002.8-2.622V8.226A2.72 2.72 0 0028 5.601zm0 19.6l-22.4-.013V8.401l22.4.015z' fill='%23626262'/%3E%3Cpath data-name='Caminho 102' d='M19.601 12.602h5.6v2.8h-5.6zm1.4 5.6h4.2v2.8h-4.2zm-2.2 3.551c0-1.924-2.347-3.9-5.2-3.9s-5.2 1.977-5.2 3.901v.65h10.4z' fill='%23626262'/%3E%3Cpath data-name='Retângulo 85' fill='rgba(0,0,0,0)' d='M0 0h33.605v33.605H0z'/%3E%3C/svg%3E");
+  background-size: 35px 35px;
+}
+
+.__modal-login-box form p:nth-child(2)::before{
+  position: absolute;
+  left: 6px;
+  top: 2.5px;
+  content: '';
+  display: block;
+  width: 33px;
+  height: 33px;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='34.005' height='34.005'%3E%3Cpath data-name='Caminho 94' d='M17.002 2.834a7.092 7.092 0 00-7.084 7.084v2.834H8.501a2.837 2.837 0 00-2.834 2.834v12.748a2.837 2.837 0 002.834 2.834h17a2.837 2.837 0 002.836-2.834V15.586a2.837 2.837 0 00-2.834-2.834h-1.417V9.918a7.092 7.092 0 00-7.084-7.084zm-4.251 7.084a4.251 4.251 0 118.5 0v2.834h-8.5zm12.755 18.416h-7.087V25.11a2.834 2.834 0 10-2.834 0v3.224H8.501V15.586h17v12.752z' fill='%23626262'/%3E%3Cpath data-name='Retângulo 81' fill='rgba(0,0,0,0)' d='M0 0h34.005v34.005H0z'/%3E%3C/svg%3E");
+  background-size: 33px 33px;
+}
+
+.__modal-login-box form input::placeholder{
+  color: #000;
+  font-size: 14px;
+}
+
+.__modal-login-box .remember-password{
+  color: #F97D00;
+  font-size: 14px;
+  cursor: pointer;
+}
+.__modal-login-box .change-type-password{
+  width: 22px;
+  height: 22px;
+  display: flex;
+  background-size: 22px 22px;
+  position: absolute;
+  right: 14px;
+  top: 9px;
+  cursor: pointer;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='20.976' height='20.976'%3E%3Cpath data-name='Caminho 97' d='M10.704 6.509a3.956 3.956 0 00-1.381.251l5.128 5.128a3.951 3.951 0 00.251-1.4 4 4 0 00-4-3.98z' fill='%23626262'/%3E%3Cpath data-name='Caminho 98' d='M19.979 10.215a10.53 10.53 0 00-9.217-5.827 9.8 9.8 0 00-3.053.5l.938.944a8.612 8.612 0 012.115-.274 9.3 9.3 0 018.041 4.912 10.343 10.343 0 01-2.546 2.972l.827.827a11.613 11.613 0 002.913-3.5l.151-.28z' fill='%23626262'/%3E%3Cpath data-name='Caminho 99' d='M2.838 3.368l2.6 2.6a11.374 11.374 0 00-3.9 4.242l-.151.274.151.28a10.53 10.53 0 009.218 5.827 9.863 9.863 0 004.293-.984l2.915 2.913 1.02-.874L3.834 2.5zm4.836 4.836a3.991 3.991 0 005.565 5.565l.932.932a8.688 8.688 0 01-3.414.7 9.3 9.3 0 01-8.041-4.912 10.075 10.075 0 013.565-3.671z' fill='%23626262'/%3E%3Cpath data-name='Retângulo 84' fill='rgba(0,0,0,0)' d='M0 0h20.976v20.976H0z'/%3E%3C/svg%3E");
+}
+
+.__modal-login-box form button{
+  background: #F97D00;
+  color: #fff;
+  font-size: 14px;
+  width: 100%;
+  margin: 25px 0;
+  height: 45px;
+  border-radius: 12px;
+  font-weight: bold;
+}
+
+.__login-integrations .title {
+  align-items: center;
+  justify-content: space-between;
+}
+
+.__login-integrations .title span:not(.libe){
+  text-align: center;
+}   
+
+.__login-integrations .title .line{
+  width: 30%;
+  height: 1px;
+  background: #707070;
+}
+
+.__login-integrations ul {
+  justify-content: center;
+  margin-top: 15px;
+  margin-bottom: 20px;
+}
+
+.__login-integrations ul li:nth-child(1) {
+  margin-right: 25px;
+}
+
+.__login-integrations ul li img {
+  width: 100px;
+  height: 35px;
+  background: #000;
+}
+
+.__modal-login-box .create-account{
+  border: 2px solid #F97D00;
+  width: 100%;
+  border-radius: 12px;
+  display: flex;
+  min-height: 45px;
+  height: 45px;
+  align-items: center;
+  justify-content: center;
+  color: #F97D00;
+  font-size: 14px;
+  font-weight: bold;
+}
+/* end login */ 
+
+@media screen and (max-width: 400px){
+  footer .__app-col{
+    flex-direction: column;
+    align-items: center;
+  }
+
+  footer .banner-app{
+    margin-right: 0;
+  }
+
+  footer .__description-app{
+    align-items: center;
+    text-align: center;
+  }
+
+  footer .__description-app a {
+    margin-bottom: 10px;
+    width: unset;
+    display: block;
+}
+
+}
+
+
+@media screen and (max-width: 575px) {
+  .__box-reservation-only .inputs{
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .__header .topnav {
+    display: flex;
+  }
+
+  .__header .container{
+    display: none;
+  }
+
+  .copyright .container{
+    display: flex;
+    flex-direction: column;
+  }
+
+  footer .__banners-services {
+    flex-direction: column;
+  }
+  footer .__banners-services li {
+    width: unset;
+  }
+  footer .__banners-services a {
+    flex-direction: row;
+  }
+
+  .__newsletter .__box-news{
+    flex-direction: column;
+  }
+  .__newsletter .__box-news > p {
+    width: unset;
+  }
+
+  .__newsletter .__box-news form {
+    width: unset;
+    flex-direction: column;
+    margin-top: 10px;
+  }
+
+  .__newsletter .__box-news form input{
+    margin: 0;
+    width: 100%;
+  }
+
+  .__newsletter .__box-news form button {
+    margin-top: 10px;
+  }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1100px){
+  footer .__banners-services img {
+    margin-right: 0;
+    margin-bottom: 15px;
+  }
+  footer .__banners-services a {
+    flex-direction: column;
+  }
+}
+
+@media screen and (max-width: 949px) {
+  .__box-reservation h2{
+    text-align: center;
+  }
+
+  .__box-reservation-only .inputs{
+    justify-content: space-around;
+  }  
+}

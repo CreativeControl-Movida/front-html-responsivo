@@ -1,0 +1,163 @@
+/* filter */
+
+.__filter {
+  display: flex;
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+
+.__filter p, .__filter h3 {
+  color: #000;
+  font-weight: 400;
+  font-size: 16px;
+}
+
+.__filter h3 {
+  display: flex;
+  align-items: center;
+}
+
+.__filter h3:after {
+  content: '';
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  margin-left: 8px;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='512' height='512' viewBox='0 0 284.929 284.929'%3E%3Cpath d='M282.082 76.511l-14.274-14.273c-1.902-1.906-4.093-2.856-6.57-2.856-2.471 0-4.661.95-6.563 2.856L142.466 174.441 30.262 62.241c-1.903-1.906-4.093-2.856-6.567-2.856-2.475 0-4.665.95-6.567 2.856L2.856 76.515C.95 78.417 0 80.607 0 83.082c0 2.473.953 4.663 2.856 6.565l133.043 133.046c1.902 1.903 4.093 2.854 6.567 2.854s4.661-.951 6.562-2.854L282.082 89.647c1.902-1.903 2.847-4.093 2.847-6.565 0-2.475-.945-4.665-2.847-6.571z' data-original='%23000000' xmlns='http://www.w3.org/2000/svg'/%3E%3C/svg%3E");
+  background-size: 10px 10px;
+}
+
+.__filter-custom {
+  display: flex;
+  max-width: 550px;
+  width: 550px;
+  justify-content: space-between;
+  flex-grow: 1;
+}
+
+.__filter-order {
+  flex-grow: 3;
+  justify-content: flex-end;
+  display: flex;
+  align-items: flex-end;
+}
+
+/* end filter */
+
+/* shelf */
+
+.departament .container{
+  padding: 0 20px;
+}
+
+.__list-cars {
+  margin-bottom: 0px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+.__list-cars > li{
+  width: calc(390px - 35px);
+  margin: 0 5px 75px;
+}
+
+.__box-car {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  border-radius: 25px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  box-shadow: -1px 4px 30px -16px;
+}
+
+.__box-car h2 {
+  font-size: 20px;
+  text-transform: uppercase;
+  margin-bottom: 13px;
+  text-align: center;
+}
+
+.__box-car img {
+  width: 100%;
+}
+
+.__box-car .description-car {
+  font-size: 14px;
+  margin-bottom: 25px;
+  padding-left: 15px;
+  padding-right: 15px;
+  margin-top: 15px;
+}
+
+.__box-car .advantages {
+  margin-bottom: 15px;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+.__box-car .advantages h3 {
+  font-weight: bold;
+  font-size: 16px;
+  text-transform: uppercase;
+  margin-bottom: 15px;
+}
+
+.__box-car .advantages ul {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.__box-car .advantages li {
+  width: calc(100%/2);
+  margin-bottom: 10px;
+  font-size: 15px;
+}
+
+.__box-car .advantages li::before {
+  content: "";
+  width: 10px;
+  height: 10px;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8.673'%3E%3Cg data-name='correct (1)'%3E%3Cpath data-name='Caminho 207' d='M4.6 8.506a.645.645 0 01-.866 0L.269 5.286a.814.814 0 010-1.21l.433-.4a.968.968 0 011.3 0l2.16 2.011L10 .251a.968.968 0 011.3 0l.433.4a.814.814 0 010 1.21zm0 0' fill='%23f97d00'/%3E%3C/g%3E%3C/svg%3E");
+  display: inline-block;
+  margin-right: 10px;
+  background-size: 10px 10px;
+}
+
+.__box-car .buttons {
+  width: 100%;
+  display: flex;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+.__box-car .buttons a {
+  width: calc((100%/2) - 5px);
+  color: #fff;
+  text-align: center;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  border-radius: 10px;
+}
+
+.__box-car .buttons a strong {
+  color: #fff;
+}
+
+.__box-car .buttons a:first-child {
+  margin-right: 15px;
+  background: orange;
+}
+
+.__box-car .buttons a:nth-child(2) {
+  background: #b8b7b5;
+}
+
+/* end shelf */
+
+@media screen and (max-width: 768px){
+  .__description-page{
+    margin-top: 95px;
+  }
+}
