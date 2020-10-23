@@ -45,8 +45,6 @@ function getEmailNewsleter(e){
     }else{
         alert('Preencha com um e-mail válido!')
     }
-
-
 }
 
 // choicePlain
@@ -161,3 +159,33 @@ document.querySelector('.change-type-password').addEventListener('click', functi
       document.querySelector('#password-login').type = "password";
   }
 })
+
+
+// checks 
+const checksLi = document.querySelectorAll('.list-box-info li');
+
+for(let check of checksLi){
+    
+    check.addEventListener('click', function(e) {
+      e.preventDefault();
+    
+      if(check.classList.contains('active')){
+          check.classList.remove('active');
+      }else{
+          
+        if(check.closest('.protection')){
+            removeActive();
+        }
+        check.classList.add('active')
+      }
+    });
+
+    function removeActive(){
+        document.querySelectorAll('.protection .list-box-info li').forEach(function(el){
+            el.classList.remove('active');
+        })
+    }
+}
+
+
+
